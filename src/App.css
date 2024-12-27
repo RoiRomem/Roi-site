@@ -1,0 +1,125 @@
+/* Base styles */
+
+/* Color variables */
+:root {
+  --color-background: #0F0F0F;
+  --color-primary: #576c94;
+  --color-secondary: #005B41;
+  --color-accent: #008170;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+}
+
+.container {
+  min-height: 100vh;
+  color: var(--color-accent);
+  font-family: monospace;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: relative;
+  height: fit-content;
+}
+
+.title {
+  color: var(--color-secondary);
+  font-size: 28px;
+  margin: 0 0 5px 0;
+}
+
+.subtitle {
+  color: var(--color-secondary);
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+/* Navigation */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  opacity: 0.7;
+}
+
+/* Terminal */
+.terminal {
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.prompt {
+  margin-bottom: 15px;
+}
+
+.content {
+  line-height: 1.6;
+}
+
+/* Utility classes */
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    display: block;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .sidebar {
+    position: static;
+    margin-bottom: 30px;
+  }
+}
+
+.active {
+  color: var(--color-primary);
+}
